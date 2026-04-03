@@ -3,12 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guincho 24h São Joaquim da Barra | Atendimento Imediato</title>
-    <meta name="description" content="Guincho 24 horas em São Joaquim da Barra e região. Atendimento rápido e confiável para carros, motos, caminhonetes. Chame agora pelo WhatsApp!">
+    <title>Guincho 24h em São Joaquim da Barra - Zuf Car Auto Socorro</title>
+    <meta name="description" content="Guincho 24h em São Joaquim da Barra. Atendimento rápido, seguro e com melhor preço. Auto socorro urgente e reboque de veículos 24 horas. Chame no Whatsapp agora!">
+    <meta name="keywords" content="guincho 24 horas, guincho 24 h, auto socorro urgente, atendimento rápido, reboque de veículos, guincho São Joaquim da Barra, guincho 24h, socorro estrada, guincho perto de mim">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Zuf Car Auto Socorro">
+    <meta name="language" content="pt-BR">
+    <meta name="geo.region" content="SP-BR">
+    <meta name="geo.placename" content="São Joaquim da Barra">
+    <meta name="geo.position" content="-20.5819;-47.8567">
+    <meta name="ICBM" content="-20.5819, -47.8567">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Guincho 24h em São Joaquim da Barra - Zuf Car Auto Socorro">
+    <meta property="og:description" content="Guincho 24h em São Joaquim da Barra. Atendimento rápido, seguro e com melhor preço. Chame no Whatsapp agora!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zufcarguinchos.com.br">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Zuf Car Auto Socorro">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guincho 24h em São Joaquim da Barra - Zuf Car Auto Socorro">
+    <meta name="twitter:description" content="Guincho 24h em São Joaquim da Barra. Atendimento rápido, seguro e com melhor preço. Chame no Whatsapp agora!">
+    <meta name="twitter:image" content="logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Zuf Car Auto Socorro - Guincho 24h",
+        "description": "Guincho 24h em São Joaquim da Barra. Atendimento rápido, seguro e com melhor preço. Auto socorro urgente e reboque de veículos.",
+        "image": "logo.png",
+        "telephone": "+5516991639391",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Ceará, 2024 - Centro",
+            "addressLocality": "São Joaquim da Barra",
+            "addressRegion": "SP",
+            "postalCode": "14600-260",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-20.5819",
+            "longitude": "-47.8567"
+        },
+        "openingHours": "24/7",
+        "priceRange": "$$",
+        "serviceArea": "São Joaquim da Barra e região",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Guincho",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Guincho 24 Horas",
+                        "description": "Atendimento 24 horas para todos os tipos de veículos"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Auto Socorro Urgente",
+                        "description": "Atendimento rápido de emergência veicular"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Reboque de Veículos",
+                        "description": "Transporte seguro de carros, motos, caminhonetes e vans"
+                    }
+                }
+            ]
+        },
+        "sameAs": "https://wa.me/5516991639391"
+    }
+    </script>
+    
     <style>
         :root {
             --vermelho: #dc2626;
@@ -29,14 +113,94 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            scroll-padding-top: 80px;
         }
-
+        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--preto);
             color: var(--branco);
             line-height: 1.6;
             overflow-x: hidden;
+        }
+        
+        section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            min-height: 100vh;
+            position: relative;
+            scroll-margin-top: 80px;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+        
+        .scroll-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .scroll-dot.active {
+            background: var(--vermelho);
+            border-color: var(--vermelho);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        }
+        
+        .scroll-dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
+        
+        .scroll-dot.active:hover {
+            background: var(--vermelho-claro);
+        }
+        
+        /* Enhanced scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Parallax effect */
+        .parallax {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        /* Smooth scroll easing */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
         }
 
         /* Header */
@@ -113,13 +277,20 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             padding: 6rem 2rem 4rem;
             overflow: hidden;
+            scroll-snap-align: start;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            z-index: 1;
         }
 
         .hero-carousel {
@@ -357,6 +528,10 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .urgency::before {
@@ -484,6 +659,15 @@
         .services {
             padding: 5rem 2rem;
             background: var(--preto);
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .services-container {
+            width: 100%;
+            max-width: 1200px;
         }
 
         .section-header {
@@ -654,6 +838,15 @@
             background: linear-gradient(180deg, var(--preto) 0%, var(--preto-claro) 50%, var(--preto) 100%);
             position: relative;
             overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .differentials-container {
+            width: 100%;
+            max-width: 1200px;
         }
 
         .differentials::before {
@@ -877,6 +1070,15 @@
         .testimonials {
             padding: 5rem 2rem;
             background: var(--preto);
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonials-container {
+            width: 100%;
+            max-width: 1200px;
         }
 
         .testimonials-grid {
@@ -956,6 +1158,15 @@
         .gallery {
             padding: 5rem 2rem;
             background: var(--preto);
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-container {
+            width: 100%;
+            max-width: 1200px;
         }
 
         .gallery-grid {
@@ -1143,21 +1354,15 @@
             background: linear-gradient(180deg, var(--preto-claro) 0%, var(--preto) 100%);
             position: relative;
             overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .map-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--vermelho), transparent);
-        }
-
+        
         .map-container {
+            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 4rem;
@@ -1357,27 +1562,63 @@
             50% { transform: rotate(0deg); }
         }
 
-        /* Final CTA Buttons */
-        .final-cta .cta-buttons {
-            flex-direction: column;
+        /* Final CTA Section */
+        .final-cta {
+            min-height: 100vh;
+            display: flex;
             align-items: center;
-        }
-
-        .final-cta .cta-button,
-        .final-cta .cta-phone {
-            font-size: 1.25rem;
-            padding: 1.5rem 3rem;
-            min-width: 320px;
             justify-content: center;
+            background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 50%, #7f1d1d 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            scroll-snap-align: start;
         }
-
-        .final-cta .cta-button {
-            background: linear-gradient(135deg, #0a0a0a 0%, #262626 100%);
-            animation: pulse 1.5s infinite;
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255,255,255,0.03) 10px,
+                    rgba(255,255,255,0.03) 20px
+                );
+            animation: urgencyMove 20s linear infinite;
         }
-
-        .final-cta .cta-button:hover {
-            background: linear-gradient(135deg, #171717 0%, #333 100%);
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: urgencyTextPulse 2s ease-in-out infinite;
+            line-height: 1.3;
+        }
+        
+        .final-cta p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Floating WhatsApp Button */
@@ -1559,6 +1800,18 @@
         <div class="loading-spinner"></div>
     </div>
 
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <div class="scroll-dot active" data-section="hero"></div>
+        <div class="scroll-dot" data-section="urgency"></div>
+        <div class="scroll-dot" data-section="services"></div>
+        <div class="scroll-dot" data-section="differentials"></div>
+        <div class="scroll-dot" data-section="testimonials"></div>
+        <div class="scroll-dot" data-section="gallery"></div>
+        <div class="scroll-dot" data-section="map"></div>
+        <div class="scroll-dot" data-section="final-cta"></div>
+    </div>
+
     <!-- Header -->
     <header>
         <nav>
@@ -1581,7 +1834,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-carousel">
             <div class="hero-slide active" style="background-image: url('WhatsApp Image 2026-04-02 at 09.06.59.jpeg')"></div>
             <div class="hero-slide" style="background-image: url('WhatsApp Image 2026-04-02 at 09.06.59 (1).jpeg')"></div>
@@ -1652,7 +1905,7 @@
     </section>
 
     <!-- Urgency Section -->
-    <section class="urgency">
+    <section class="urgency" id="urgency">
         <div class="urgency-content">
             <h2>Quebrou? Bateu? Ficou na estrada? Nós resolvemos na hora!</h2>
             <div class="urgency-grid">
@@ -1681,7 +1934,8 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="services">
+        <div class="services-container">
         <div class="section-header animate-on-scroll">
             <h2>Nossos <span>Serviços</span></h2>
             <p>Atendemos todos os tipos de veículos com equipamentos modernos e equipe especializada</p>
@@ -1781,10 +2035,12 @@
                 <p>Troca de pneus furados e auxílio mecânico</p>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Differentials Section -->
-    <section class="differentials">
+    <section class="differentials" id="differentials">
+        <div class="differentials-container">
         <div class="section-header animate-on-scroll">
             <h2>Por que escolher a <span>Zuf Car</span>?</h2>
             <p>Diferenciais que garantem o melhor atendimento da região</p>
@@ -1849,10 +2105,12 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
         <div class="section-header animate-on-scroll">
             <h2>O que nossos <span>Clientes</span> dizem</h2>
             <p>Histórias reais de quem já usou nossos serviços</p>
@@ -1910,10 +2168,12 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
         <div class="section-header animate-on-scroll">
             <h2>Nossa <span>Galeria</span></h2>
             <p>Conheça nossa frota e equipamentos de perto. Clique nas fotos para ampliar.</p>
@@ -2115,7 +2375,7 @@
     </div>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" id="map">
         <div class="map-container">
             <div class="map-info animate-on-scroll">
                 <h3>Nossa <span>Localização</span></h3>
@@ -2139,10 +2399,11 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720!2d-47.8567!3d-20.5819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b0b50c5c5c5c5c%3A0x5c5c5c5c5c5c5c5c!2sR.%20Cear%C3%A1%2C%202024%20-%20Centro%2C%20S%C3%A3o%20Joaquim%20da%20Barra%20-%20SP%2C%2014600-000!5e0!3m2!1spt-BR!2sbr!4v1609459200000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
+    <section class="final-cta" id="final-cta">
         <div class="final-cta-content">
             <h2>Precisa de Guincho AGORA?</h2>
             <p>Escolha a forma mais rápida de falar conosco:</p>
@@ -2203,13 +2464,47 @@
             }, 500);
         });
 
-        // Scroll animations
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        // Enhanced scroll functionality
+        const sections = document.querySelectorAll('section');
+        const scrollDots = document.querySelectorAll('.scroll-dot');
+        const scrollIndicator = document.getElementById('scrollIndicator');
+
+        // Update active scroll dot based on scroll position
+        function updateScrollIndicator() {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop - windowHeight / 2 && 
+                    scrollPosition < sectionTop + sectionHeight - windowHeight / 2) {
+                    scrollDots.forEach(dot => dot.classList.remove('active'));
+                    if (scrollDots[index]) {
+                        scrollDots[index].classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Scroll to section when dot is clicked
+        scrollDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                sections[index].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Enhanced scroll animations
+        const animateElements = document.querySelectorAll('.animate-on-scroll, .scroll-reveal');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('visible', 'active');
                 }
             });
         }, {
@@ -2218,6 +2513,20 @@
         });
 
         animateElements.forEach(el => observer.observe(el));
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+            
+            // Update scroll indicator
+            updateScrollIndicator();
+        });
 
         // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2280,6 +2589,18 @@
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);
         });
+
+        // Hide scroll indicator on mobile
+        if (window.innerWidth <= 768) {
+            scrollIndicator.style.display = 'none';
+        }
+
+        // Add parallax class to hero carousel
+        document.querySelector('.hero-carousel').classList.add('parallax');
+        document.querySelector('.hero-carousel').dataset.speed = '0.3';
+
+        // Initialize scroll indicator
+        updateScrollIndicator();
     </script>
 </body>
 </html>
